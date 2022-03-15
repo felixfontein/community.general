@@ -227,7 +227,7 @@ EXAMPLES = """
   # For compatibility with older versions of community.general, you
   # have to use
   #
-  #   changed_when: result.packages | default([]) | length > 0
+  #   changed_when: result.packages is defined and result.packages | default([]) | length > 0
   #
   # respectively
   #
