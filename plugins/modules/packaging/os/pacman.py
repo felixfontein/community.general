@@ -216,7 +216,7 @@ EXAMPLES = """
   # To keep the old behavior, add the following to the task:
   #
   #   register: result
-  #   changed_when: result.packages | length > 0
+  #   changed_when: result.packages is defined and result.packages | length > 0
   #
   # To already switch to the new behavior now, add:
   #
