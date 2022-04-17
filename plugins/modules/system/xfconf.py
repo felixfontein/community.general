@@ -38,8 +38,10 @@ options:
     elements: raw
   value_type:
     description:
-    - The type of value being set. This is ignored if the state is "get".
-      For array mode, use a list of types.
+    - The type of value being set.
+    - For array mode: if the list has only one element, use I(force_array=true)
+      to ensure it will be interpreted by themodule as a list, otherwise pass
+      a list of types.
     type: list
     elements: str
     choices: [ int, uint, bool, float, double, string ]
