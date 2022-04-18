@@ -40,7 +40,7 @@ options:
     description:
       - The type of value being set.
       - For array mode: if the list has only one element, use I(force_array=true)
-        to ensure it will be interpreted by themodule as a list, otherwise pass
+        to ensure it will be interpreted by the module as a list, otherwise pass
         a list of types.
     type: list
     elements: str
