@@ -5,7 +5,7 @@
 
 from __future__ import (absolute_import, division, print_function)
 
-DOCUMENTATION = '''
+DOCUMENTATION = r"""
 name: to_prettytable
 short_description: Format a list of dictionaries as an ASCII table
 version_added: "10.7.0"
@@ -30,17 +30,14 @@ options:
     elements: string
   column_alignments:
     description:
-      - >-
-          Dictionary where keys are column names and values are alignment settings.
-          Valid alignment values are C(left), C(center), C(right), C(l), C(c), or C(r).
-      - >-
-          For example, V({'name': 'left', 'id': 'right'}) will align the C(name) column to the left
-          and the C(id) column to the right.
+      - Dictionary where keys are column names and values are alignment settings. Valid alignment values are C(left), C(center),
+        C(right), C(l), C(c), or C(r).
+      - "For example, V({'name': 'left', 'id': 'right'}) will align the C(name) column to the left and the C(id) column to
+        the right."
     type: dictionary
-'''
+"""
 
-EXAMPLES = '''
----
+EXAMPLES = r"""
 - name: Set a list of users
   ansible.builtin.set_fact:
     users:
@@ -104,13 +101,13 @@ EXAMPLES = '''
           column_alignments={'name': 'center', 'age': 'right', 'role': 'left'}
         )
       }}
-'''
+"""
 
-RETURN = '''
+RETURN = r"""
 _value:
   description: The formatted ASCII table.
   type: string
-'''
+"""
 
 try:
     import prettytable
