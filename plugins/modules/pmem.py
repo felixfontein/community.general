@@ -147,20 +147,21 @@ result:
     namespace:
       description: The list of the detail of namespace.
       type: list
-  sample: [
-    {
-      "appdirect": 111669149696,
-      "memorymode": 970662608896,
-      "reserved": 3626500096,
-      "socket": 0
-    },
-    {
-      "appdirect": 111669149696,
-      "memorymode": 970662608896,
-      "reserved": 3626500096,
-      "socket": 1
-    }
-  ]
+  sample:
+    [
+      {
+        "appdirect": 111669149696,
+        "memorymode": 970662608896,
+        "reserved": 3626500096,
+        "socket": 0
+      },
+      {
+        "appdirect": 111669149696,
+        "memorymode": 970662608896,
+        "reserved": 3626500096,
+        "socket": 1
+      }
+    ]
 """
 
 EXAMPLES = r"""

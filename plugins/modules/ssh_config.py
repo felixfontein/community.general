@@ -189,22 +189,27 @@ hosts_change_diff:
   description: A list of host diff changes.
   returned: on change
   type: list
-  sample: [
-    {
-      "example.com": {
-        "new": {
-          "hostname": "github.com",
-          "identityfile": ["/tmp/test_ssh_config/fake_id_rsa"],
-          "port": "2224"
-        },
-        "old": {
-          "hostname": "github.com",
-          "identityfile": ["/tmp/test_ssh_config/fake_id_rsa"],
-          "port": "2224"
+  sample:
+    [
+      {
+        "example.com": {
+          "new": {
+            "hostname": "github.com",
+            "identityfile": [
+              "/tmp/test_ssh_config/fake_id_rsa"
+            ],
+            "port": "2224"
+          },
+          "old": {
+            "hostname": "github.com",
+            "identityfile": [
+              "/tmp/test_ssh_config/fake_id_rsa"
+            ],
+            "port": "2224"
+          }
         }
       }
-    }
-  ]
+    ]
 """
 
 import os

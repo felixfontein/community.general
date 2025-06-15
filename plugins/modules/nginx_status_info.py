@@ -91,7 +91,11 @@ data:
   description: HTTP response as is.
   returned: success
   type: str
-  sample: "Active connections: 2340 \nserver accepts handled requests\n 81769947 81769947 144332345 \nReading: 0 Writing: 241 Waiting: 2092 \n"
+  sample: |
+    Active connections: 2340
+    server accepts handled requests
+    81769947 81769947 144332345
+    Reading: 0 Writing: 241 Waiting: 2092
 """
 
 import re
