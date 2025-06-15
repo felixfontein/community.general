@@ -11,7 +11,7 @@ DOCUMENTATION = r"""
 name: passwordstore
 author:
   - Patrick Deelman (!UNKNOWN) <patrick@patrickdeelman.nl>
-short_description: manage passwords with passwordstore.org's pass utility
+short_description: Manage passwords with passwordstore.org's pass utility
 description:
   - Enables Ansible to retrieve, create or update passwords from the passwordstore.org pass utility. It can also retrieve,
     create or update YAML style keys stored as multilines in the passwordfile.
