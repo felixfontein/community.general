@@ -42,7 +42,7 @@ options:
     description:
       - Include special characters in the string.
       - Special characters are taken from Python standard library C(string).
-        See L(the documentation of string.punctuation,https://docs.python.org/3/library/string.html#string.punctuation)
+      - See L(the documentation of string.punctuation,https://docs.python.org/3/library/string.html#string.punctuation)
         for which characters will be used.
       - The choice of special characters can be changed to setting O(override_special).
     default: true

@@ -6,7 +6,7 @@
 from __future__ import annotations
 
 
-DOCUMENTATION = r'''
+DOCUMENTATION = r"""
 name: scaleway
 author:
   - Remy Leone (@remyleone)
@@ -17,7 +17,7 @@ requirements:
   - PyYAML
 options:
   plugin:
-    description: Token that ensures this is a source file for the 'scaleway' plugin.
+    description: Token that ensures this is a source file for the P(community.general.scaleway#inventory) plugin.
     required: true
     type: string
     choices: ['scaleway', 'community.general.scaleway']
@@ -37,13 +37,14 @@ options:
   scw_profile:
     description:
       - The config profile to use in config file.
-      - By default uses the one specified as C(active_profile) in the config file, or falls back to V(default) if that is not defined.
+      - By default uses the one specified as C(active_profile) in the config file, or falls back to V(default) if that is
+        not defined.
     type: string
     version_added: 4.4.0
   oauth_token:
     description:
       - Scaleway OAuth token.
-      - If not explicitly defined or in environment variables, it will try to lookup in the scaleway-cli configuration file
+      - If not explicitly defined or in environment variables, it will try to lookup in the C(scaleway-cli)'s configuration file
         (C($SCW_CONFIG_PATH), C($XDG_CONFIG_HOME/scw/config.yaml), or C(~/.config/scw/config.yaml)).
       - More details on L(how to generate token, https://www.scaleway.com/en/docs/generate-api-keys/).
     type: string
@@ -65,14 +66,12 @@ options:
       - hostname
       - id
   variables:
-    description: 'Set individual variables: keys are variable names and
-                  values are templates. Any value returned by the
-                  L(Scaleway API, https://developer.scaleway.com/#servers-server-get)
-                  can be used.'
+    description: 'Set individual variables: keys are variable names and values are templates. Any value returned by the L(Scaleway
+      API, https://developer.scaleway.com/#servers-server-get) can be used.'
     type: dict
-'''
+"""
 
-EXAMPLES = r'''
+EXAMPLES = r"""
 # scaleway_inventory.yml file in YAML format
 # Example command line: ansible-inventory --list -i scaleway_inventory.yml
 
@@ -110,7 +109,7 @@ variables:
   ansible_host: public_ip.address
   ansible_connection: "'ssh'"
   ansible_user: "'admin'"
-'''
+"""
 
 import os
 import json

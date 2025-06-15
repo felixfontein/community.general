@@ -12,7 +12,7 @@ author:
   - Mark Ettema (@m-a-r-k-e)
   - Alexander Petrenz (@alpex8)
 name: merge_variables
-short_description: merge variables whose names match a given pattern
+short_description: Merge variables whose names match a given pattern
 description:
   - This lookup returns the merged result of all variables in scope that match the given prefixes, suffixes, or regular expressions,
     optionally.

@@ -9,7 +9,7 @@ __metaclass__ = type
 DOCUMENTATION = r"""
 name: dig
 author: Jan-Piet Mens (@jpmens) <jpmens(at)gmail.com>
-short_description: query DNS using the dnspython library
+short_description: Query DNS using the dnspython library
 requirements:
   - dnspython (python library, http://www.dnspython.org/)
 description:
@@ -64,7 +64,7 @@ options:
       - TLSA
       - TXT
   flat:
-    description: If 0 each record is returned as a dictionary, otherwise a string.
+    description: If V(0) each record is returned as a dictionary, otherwise a string.
     type: int
     default: 1
   retry_servfail:
@@ -104,10 +104,9 @@ options:
     type: int
     version_added: 9.5.0
 notes:
-  - V(ALL) is not a record in itself, merely the listed fields are available for any record results you retrieve in the form of
-    a dictionary.
-  - While the plugin supports anything which C(dnspython) supports out of the box, only a subset can be converted
-    into a dictionary.
+  - V(ALL) is not a record in itself, merely the listed fields are available for any record results you retrieve in the form
+    of a dictionary.
+  - While the plugin supports anything which C(dnspython) supports out of the box, only a subset can be converted into a dictionary.
   - If you need to obtain the AAAA record (IPv6 address), you must specify the record type explicitly. Syntax for specifying
     the record type is shown in the examples below.
   - The trailing dot in most of the examples listed is purely optional, but is specified for completeness/correctness sake.
@@ -167,8 +166,7 @@ EXAMPLES = r"""
 RETURN = r"""
 _list:
   description:
-    - List of composed strings or of dictionaries, with fields depending
-      on query type.
+    - List of composed strings or of dictionaries, with fields depending on query type.
   type: list
   elements: raw
   contains:

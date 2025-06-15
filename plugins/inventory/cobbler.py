@@ -5,21 +5,24 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 from __future__ import annotations
 
-DOCUMENTATION = '''
+DOCUMENTATION = r"""
 author: Orion Poplawski (@opoplawski)
 name: cobbler
 short_description: Cobbler inventory source
 version_added: 1.0.0
 description:
   - Get inventory hosts from the cobbler service.
-  - "Uses a configuration file as an inventory source, it must end in C(.cobbler.yml) or C(.cobbler.yaml) and have a C(plugin: cobbler) entry."
-  - Adds the primary IP addresses to C(cobbler_ipv4_address) and C(cobbler_ipv6_address) host variables if defined in Cobbler.  The primary IP address is
-    defined as the management interface if defined, or the interface who's DNS name matches the hostname of the system, or else the first interface found.
+  - 'Uses a configuration file as an inventory source, it must end in C(.cobbler.yml) or C(.cobbler.yaml) and have a C(plugin:
+    cobbler) entry.'
+  - Adds the primary IP addresses to C(cobbler_ipv4_address) and C(cobbler_ipv6_address) host variables if defined in Cobbler.
+    The primary IP address is defined as the management interface if defined, or the interface who's DNS name matches the
+    hostname of the system, or else the first interface found.
 extends_documentation_fragment:
   - inventory_cache
 options:
   plugin:
-    description: The name of this plugin, it should always be set to V(community.general.cobbler) for this plugin to recognize it as its own.
+    description: The name of this plugin, it should always be set to V(community.general.cobbler) for this plugin to recognize
+      it as its own.
     type: string
     required: true
     choices: ['cobbler', 'community.general.cobbler']
@@ -81,7 +84,8 @@ options:
   inventory_hostname:
     description:
       - What to use for the ansible inventory hostname.
-      - By default the networking hostname is used if defined, otherwise the DNS name of the management or first non-static interface.
+      - By default the networking hostname is used if defined, otherwise the DNS name of the management or first non-static
+        interface.
       - If set to V(system), the cobbler system name is used.
     type: str
     choices: ['hostname', 'system']
@@ -104,28 +108,28 @@ options:
     default: true
   want_ip_addresses:
     description:
-      - Toggle, if V(true) the plugin will add a C(cobbler_ipv4_addresses) and C(cobbler_ipv6_addresses) dictionary to the defined O(group) mapping
-        interface DNS names to IP addresses.
+      - Toggle, if V(true) the plugin will add a C(cobbler_ipv4_addresses) and C(cobbler_ipv6_addresses) dictionary to the
+        defined O(group) mapping interface DNS names to IP addresses.
     type: boolean
     default: true
     version_added: 7.1.0
   facts_level:
     description:
-      - "Set to V(normal) to gather only system-level variables."
-      - "Set to V(as_rendered) to gather all variables as rolled up by Cobbler."
+      - Set to V(normal) to gather only system-level variables.
+      - Set to V(as_rendered) to gather all variables as rolled up by Cobbler.
     type: string
     choices: ['normal', 'as_rendered']
     default: normal
     version_added: 10.7.0
-'''
+"""
 
-EXAMPLES = '''
+EXAMPLES = r"""
 # my.cobbler.yml
 plugin: community.general.cobbler
 url: http://cobbler/cobbler_api
 user: ansible-tester
 password: secure
-'''
+"""
 
 import socket
 

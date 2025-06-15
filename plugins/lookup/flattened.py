@@ -9,7 +9,7 @@ __metaclass__ = type
 DOCUMENTATION = r"""
 name: flattened
 author: Serge van Ginderachter (!UNKNOWN) <serge@vanginderachter.be>
-short_description: return single list completely flattened
+short_description: Return single list completely flattened
 description:
   - Given one or more lists, this lookup will flatten any list elements found recursively until only 1 list is left.
 options:

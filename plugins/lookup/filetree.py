@@ -9,7 +9,7 @@ __metaclass__ = type
 DOCUMENTATION = r"""
 name: filetree
 author: Dag Wieers (@dagwieers) <dag@wieers.com>
-short_description: recursively match all files in a directory tree
+short_description: Recursively match all files in a directory tree
 description:
   - This lookup enables you to template a complete tree of files on a target system while retaining permissions and ownership.
   - Supports directories, files and symlinks, including SELinux and other file properties.
@@ -48,7 +48,7 @@ EXAMPLES = r"""
     src: '{{ item.src }}'
     dest: /web/{{ item.path }}
     state: link
-    follow: false  # avoid corrupting target files if the link already exists
+    follow: false # avoid corrupting target files if the link already exists
     force: true
     mode: '{{ item.mode }}'
   with_community.general.filetree: web/

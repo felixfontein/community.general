@@ -9,7 +9,7 @@ __metaclass__ = type
 DOCUMENTATION = r"""
 name: dnstxt
 author: Jan-Piet Mens (@jpmens) <jpmens(at)gmail.com>
-short_description: query a domain(s)'s DNS txt fields
+short_description: Query a domain(s)'s DNS txt fields
 requirements:
   - dns/dns.resolver (python library)
 description:
