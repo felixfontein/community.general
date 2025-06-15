@@ -5,7 +5,7 @@
 
 from __future__ import annotations
 
-DOCUMENTATION = r'''
+DOCUMENTATION = r"""
 name: online
 author:
   - Remy Leone (@remyleone)
@@ -14,7 +14,7 @@ description:
   - Get inventory hosts from Scaleway (previously Online SAS or Online.net).
 options:
   plugin:
-    description: token that ensures this is a source file for the 'online' plugin.
+    description: Token that ensures this is a source file for the P(community.general.online#inventory) plugin.
     type: string
     required: true
     choices: ['online', 'community.general.online']
@@ -45,9 +45,9 @@ options:
       - location
       - offer
       - rpn
-'''
+"""
 
-EXAMPLES = r'''
+EXAMPLES = r"""
 # online_inventory.yml file in YAML format
 # Example command line: ansible-inventory --list -i online_inventory.yml
 
@@ -58,7 +58,7 @@ groups:
   - location
   - offer
   - rpn
-'''
+"""
 
 import json
 from sys import version as python_version
