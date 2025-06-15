@@ -512,20 +512,21 @@ instances:
     networks:
       description: A list of dictionaries with info about IP, NAME, MAC, SECURITY_GROUPS for each NIC.
       type: list
-      sample: [
-        {
-          "ip": "10.120.5.33",
-          "mac": "02:00:0a:78:05:21",
-          "name": "default-test-private",
-          "security_groups": "0,10"
-        },
-        {
-          "ip": "10.120.5.34",
-          "mac": "02:00:0a:78:05:22",
-          "name": "default-test-private",
-          "security_groups": "0"
-        }
-      ]
+      sample:
+        [
+          {
+            "ip": "10.120.5.33",
+            "mac": "02:00:0a:78:05:21",
+            "name": "default-test-private",
+            "security_groups": "0,10"
+          },
+          {
+            "ip": "10.120.5.34",
+            "mac": "02:00:0a:78:05:22",
+            "name": "default-test-private",
+            "security_groups": "0"
+          }
+        ]
     uptime_h:
       description: Uptime of the instance in hours.
       type: int
@@ -533,27 +534,35 @@ instances:
     labels:
       description: A list of string labels that are associated with the instance.
       type: list
-      sample: ["foo", "spec-label"]
+      sample:
+        [
+          "foo",
+          "spec-label"
+        ]
     attributes:
       description: A dictionary of key/values attributes that are associated with the instance.
       type: dict
-      sample: {
-        "HYPERVISOR": "kvm",
-        "LOGO": "images/logos/centos.png",
-        "TE_GALAXY": "bar",
-        "USER_INPUTS": null
-      }
+      sample:
+        {
+          "HYPERVISOR": "kvm",
+          "LOGO": "images/logos/centos.png",
+          "TE_GALAXY": "bar",
+          "USER_INPUTS": null
+        }
     updateconf:
       description: A dictionary of key/values attributes that are set with the updateconf API call.
       type: dict
       version_added: 6.3.0
-      sample: {
-        "OS": { "ARCH": "x86_64" },
-        "CONTEXT": {
-          "START_SCRIPT": "ip r r 169.254.16.86/32 dev eth0",
-          "SSH_PUBLIC_KEY": "ssh-rsa ...\\nssh-ed25519 ..."
+      sample:
+        {
+          "OS": {
+            "ARCH": "x86_64"
+          },
+          "CONTEXT": {
+            "START_SCRIPT": "ip r r 169.254.16.86/32 dev eth0",
+            "SSH_PUBLIC_KEY": "ssh-rsa ...\\nssh-ed25519 ..."
+          }
         }
-      }
 tagged_instances:
   description:
     - A list of instances info based on a specific attributes and/or labels that are specified with O(count_attributes) and
@@ -621,20 +630,21 @@ tagged_instances:
     networks:
       description: A list of dictionaries with info about IP, NAME, MAC, SECURITY_GROUPS for each NIC.
       type: list
-      sample: [
-        {
-          "ip": "10.120.5.33",
-          "mac": "02:00:0a:78:05:21",
-          "name": "default-test-private",
-          "security_groups": "0,10"
-        },
-        {
-          "ip": "10.120.5.34",
-          "mac": "02:00:0a:78:05:22",
-          "name": "default-test-private",
-          "security_groups": "0"
-        }
-      ]
+      sample:
+        [
+          {
+            "ip": "10.120.5.33",
+            "mac": "02:00:0a:78:05:21",
+            "name": "default-test-private",
+            "security_groups": "0,10"
+          },
+          {
+            "ip": "10.120.5.34",
+            "mac": "02:00:0a:78:05:22",
+            "name": "default-test-private",
+            "security_groups": "0"
+          }
+        ]
     uptime_h:
       description: Uptime of the instance in hours.
       type: int
@@ -646,12 +656,27 @@ tagged_instances:
     attributes:
       description: A dictionary of key/values attributes that are associated with the instance.
       type: dict
-      sample: {"HYPERVISOR": "kvm", "LOGO": "images/logos/centos.png", "TE_GALAXY": "bar", "USER_INPUTS": null}
+      sample:
+        {
+          "HYPERVISOR": "kvm",
+          "LOGO": "images/logos/centos.png",
+          "TE_GALAXY": "bar",
+          "USER_INPUTS": null
+        }
     updateconf:
       description: A dictionary of key/values attributes that are set with the updateconf API call.
       type: dict
       version_added: 6.3.0
-      sample: {"OS": {"ARCH": "x86_64"}, "CONTEXT": {"START_SCRIPT": "ip r r 169.254.16.86/32 dev eth0", "SSH_PUBLIC_KEY": "ssh-rsa ...\\nssh-ed25519 ..."}}
+      sample:
+        {
+          "OS": {
+            "ARCH": "x86_64"
+          },
+          "CONTEXT": {
+            "START_SCRIPT": "ip r r 169.254.16.86/32 dev eth0",
+            "SSH_PUBLIC_KEY": "ssh-rsa ...\\nssh-ed25519 ..."
+          }
+        }
 """
 
 try:

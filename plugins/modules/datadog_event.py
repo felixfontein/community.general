@@ -16,7 +16,7 @@ __metaclass__ = type
 
 DOCUMENTATION = r"""
 module: datadog_event
-short_description: Posts events to Datadog  service
+short_description: Posts events to Datadog service
 description:
   - Allows to post events to Datadog (www.datadoghq.com) service.
   - Uses http://docs.datadoghq.com/api/#events API.

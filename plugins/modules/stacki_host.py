@@ -136,7 +136,19 @@ stdout_lines:
   description: The value of stdout split into a list.
   returned: always
   type: list
-  sample: [['...', '...'], ['...'], ['...']]
+  sample:
+    [
+      [
+        "...",
+        "..."
+      ],
+      [
+        "..."
+      ],
+      [
+        "..."
+      ]
+    ]
 """
 
 import json

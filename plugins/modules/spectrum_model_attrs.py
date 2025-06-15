@@ -138,7 +138,11 @@ changed_attrs:
   description: Dictionary of changed name or hex IDs (whichever was specified) to their new corresponding values.
   type: dict
   returned: always
-  sample: {"Notes": "MM set on 2021-02-03T22:04:02Z via CO CO9999 by tgates", "isManaged": "true"}
+  sample:
+    {
+      "Notes": "MM set on 2021-02-03T22:04:02Z via CO CO9999 by tgates",
+      "isManaged": "true"
+    }
 """
 
 

@@ -208,7 +208,21 @@ end_state:
       description: Realm key configuration.
       type: dict
       returned: when O(state=present)
-      sample: {"active": ["true"], "algorithm": ["RS256"], "enabled": ["true"], "priority": ["140"]}
+      sample:
+        {
+          "active": [
+            "true"
+          ],
+          "algorithm": [
+            "RS256"
+          ],
+          "enabled": [
+            "true"
+          ],
+          "priority": [
+            "140"
+          ]
+        }
 """
 
 from ansible_collections.community.general.plugins.module_utils.identity.keycloak.keycloak import KeycloakAPI, camel, \

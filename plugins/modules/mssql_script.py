@@ -170,7 +170,28 @@ query_results:
   type: list
   elements: list
   returned: success and O(output=default)
-  sample: [[[["Batch 0 - Select 0"]], [["Batch 0 - Select 1"]]], [[["Batch 1 - Select 0"]]]]
+  sample:
+    [
+      [
+        [
+          [
+            "Batch 0 - Select 0"
+          ]
+        ],
+        [
+          [
+            "Batch 0 - Select 1"
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            "Batch 1 - Select 0"
+          ]
+        ]
+      ]
+    ]
   contains:
     queries:
       description:
@@ -197,7 +218,28 @@ query_results_dict:
   type: list
   elements: list
   returned: success and O(output=dict)
-  sample: [[[["Batch 0 - Select 0"]], [["Batch 0 - Select 1"]]], [[["Batch 1 - Select 0"]]]]
+  sample:
+    [
+      [
+        [
+          [
+            "Batch 0 - Select 0"
+          ]
+        ],
+        [
+          [
+            "Batch 0 - Select 1"
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            "Batch 1 - Select 0"
+          ]
+        ]
+      ]
+    ]
   contains:
     queries:
       description:
